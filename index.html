@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Trom_Hangman</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" href="reset.css"> -->
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+</head>
+
+<body>
+    <div id='lose'></div>
+    <h1>Welcome to Hangman!</h1>
+    <h2></h2>
+    <div class='container'>
+        <div class="game">
+            <div class="block" id="block0"></div><div class="block" id="block1"></div><div class="block" id="block2"></div><div class="block" id="block3"></div><div class="block" id="block4"></div><div class="block" id="block5"></div><div class="block" id="block6"></div><div class="block" id="block7"></div><div class="block" id="block8"></div><div class="block" id="block9"></div><div class="block" id="block10"></div><div class="block" id="block11"></div><div class="newLine"></div>
+          
+            <h2 id="input" type="text" class="input" onkeydown="match()">Press Letters To Guess</h2>
+        </div>
+        <button id='hint' onclick="hint()">Click For Hint</button>
+        <button id='reset' onclick='nextGame()'>Click For New Game</button>
+        <div id='joke'></div>
+    </div>
+    
+
+<script src="main.js"></script>
+
+</body>
+
+</html>

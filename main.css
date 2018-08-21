@@ -1,0 +1,117 @@
+.block {
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border: 6px outset silver;
+    background: radial-gradient(circle, rgb(255, 251, 0), rgb(16, 54, 138));
+    margin: 0;
+    vertical-align: top;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 90px;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 75px;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+body {
+    background: lightblue url('palm.jpeg');
+
+}
+
+#hint {
+    font-size: 60px;
+    border-color: rgb(79, 79, 218);
+    margin: 30px 0px;
+    color: rgb(18, 18, 102);
+    border-radius: 20px;
+    background: rgb(28, 150, 34)
+}
+
+#reset {
+    font-size: 24px;
+    border-color: rgb(46, 170, 46);
+    margin-left: 700px;
+    color: rgb(57, 148, 45);
+    border-radius: 15px;
+    background: rgb(36, 38, 145)
+}
+
+#joke {
+    font-size: 180px;
+}
+
+#lose {
+    font-size: 360px;
+}
+
+@media only screen and (max-width: 850px) {
+
+    .block {
+        position: relative;
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        border: 3px outset silver;
+        background: radial-gradient(circle, rgb(255, 251, 0), rgb(16, 54, 138));
+        margin: 0;
+        vertical-align: top;
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 45px;
+        text-align: center;
+    }
+
+
+
+    h1 {
+        text-align: center;
+        font-size: 33px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    body {
+        background: lightblue url('palm.jpeg') 40%;
+
+    }
+
+    #hint {
+        font-size: 27px;
+        border-color: blue;
+        margin: 13px 0px;
+        color: rgb(18, 18, 102);
+        border-radius: 9px;
+        background: rgb(28, 150, 34)
+    }
+    
+    #reset {
+        
+        font-size: 10px;
+        border-color: rgb(46, 170, 46);
+        margin-left: 400px;
+        color: rgb(57, 148, 45);
+        border-radius: 7px;
+        background: rgb(36, 38, 145)
+    }
+        
+    #joke {
+        font-size: 80px;
+    }
+
+    #lose {
+        font-size: 170px;
+    }
+
+}
+
+
+
