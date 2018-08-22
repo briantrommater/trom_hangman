@@ -44,7 +44,7 @@ function checkLetter(guessLetter) {
             document.querySelector('#block' + i).innerHTML = guessLetter;
             counter++
         }
-        if (counter > game.length) {
+        if (counter == (game.length * 1.5)) {
             document.querySelector('#lose').innerHTML = 'YOU LOSE!';
             setTimeout(function() {
                 location.reload()
