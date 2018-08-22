@@ -32,7 +32,7 @@ document.querySelector('h2').innerHTML = "CLUE:  " + obj[randomWord];
 //set up some global variables. function splits string into an array
 //then for loop to see if letter clicked matches letter at that index
 //and puts letter in the proper block.  A counter starts will move to
-//a new game if you complete puzzle or hit valid letters too many times
+//a new game if you hit valid letters too many times
 
 var store;
 var counter = 0;
@@ -43,12 +43,6 @@ function checkLetter(guessLetter) {
         if (guessLetter == game[i]) {
             document.querySelector('#block' + i).innerHTML = guessLetter;
             counter++
-        }
-        if (counter === game.length) {
-            document.querySelector('#lose').innerHTML = 'NEXT GAME!';
-            setTimeout(function() {
-                location.reload()
-            }, 2400)
         }
         if (counter > game.length) {
             document.querySelector('#lose').innerHTML = 'YOU LOSE!';
