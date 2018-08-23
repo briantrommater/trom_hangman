@@ -5,7 +5,10 @@ var words = ['HEYIMFALLING', 'WINTERISCOLD', 'EGGSBENEDICT', 'HEYWHATSUPYO',
             'UNAPPETIZING', 'JAVASCRIPTOR', 'HVRZXYQWJVZQ', 'HELPMEIMDUMB', 
             'HEYIMFAILING', 'GETLOSTCREEP', 'SUPERMANFLYS', 'SUMMERISWARM',
             'SPRINGISNICE', 'FALLISBREEZY', 'FOOTBALLGOOD', 'SOCCERISDUMB',
-            'TENNISISLAME', 'GUESSTHEWORD', 'VELOCIRAPTOR', 'GRANDPARENTS'];
+            'TENNISISLAME', 'GUESSTHEWORD', 'VELOCIRAPTOR', 'GRANDPARENTS',
+            'PROFESSIONAL', 'SPORADICALLY', 'ONOMATOPOEIA', 'TRIGONOMETRY',
+            'PERSPIRATION', 'CONSTIPATION', 'CYTOSKELETON', 'HIPPOPATAMUS', 
+            'ABBREVIATION', 'DEPRECIATION', 'ASPHYXIATION', 'AERODYNAMICS'];
 
 //Multiply array length by random fraction and floor divsion
 //to get index of randome word from 0-indexmax
@@ -23,7 +26,11 @@ HELPMEIMDUMB: 'WHAT TO SAY WHEN STUCK', HEYIMFAILING: 'GOOD TO SAY BEFORE YOU FA
 GETLOSTCREEP: 'BAD DATE', SUPERMANFLYS: 'FUNCTION OF SUPERMAN', SUMMERISWARM: 'WHAT IS SUMMER?',
 SPRINGISNICE: 'WHAT IS SPRING?', FALLISBREEZY: 'WHAT IS FALL?', FOOTBALLGOOD: 'WHAT IS FOOTBALL?',
 SOCCERISDUMB: 'WHAT IS SOCCER?', TENNISISLAME: 'WHAT IS TENNIS?', GUESSTHEWORD: 'GUESS THE WORD',
-VELOCIRAPTOR: 'TYPE OF DINOSAUR', GRANDPARENTS: 'PARENTS PARENTS'};
+VELOCIRAPTOR: 'TYPE OF DINOSAUR', GRANDPARENTS: 'PARENTS PARENTS',PROFESSIONAL: 'NOT AN AMATEUR', 
+SPORADICALLY: 'RANDOMLY OCCURRING', ONOMATOPOEIA: 'WORD LIKE WOOF', TRIGONOMETRY: 'ALGEBRA WITH TRIANGLES',
+PERSPIRATION: 'TO SWEAT', CONSTIPATION: 'CANT GO POOP', CYTOSKELETON: 'SKELETON OF A CELL',
+HIPPOPATAMUS: 'HUNGRY HUNGRY ..', ABBREVIATION: 'SHORTENED VERSION OF WORD', 
+DEPRECIATION: 'GO DOWN IN VALUE', ASPHYXIATION: 'SUFFOCATE', AERODYNAMICS: 'HOW STUFF FLIES'};
 
 //Clues is displayed in an h2-> use bracket notation to get value of randomword key
 
@@ -36,16 +43,16 @@ document.querySelector('h2').innerHTML = "CLUE:  " + obj[randomWord];
 
 var store;
 var counter = 0;
+var gameArr2 = [];
 function checkLetter(guessLetter) {
     var game = randomWord;
-    var gameArr = randomWord.split('')
+    var gameArr = randomWord.split('');
     for (var i = 0; i < game.length; i++) {
         if (guessLetter == game[i]) {
             document.querySelector('#block' + i).innerHTML = guessLetter;
-            counter++
+            counter++;
         }
         if (counter > (game.length * 1.2)) {
-            
             document.querySelector("#myAudio").play();
             document.querySelector('#lose').innerHTML = 'YOU LOSE!';
             setTimeout(function() {
@@ -61,8 +68,7 @@ function checkLetter(guessLetter) {
 document.addEventListener('keypress', function(event){
     store = event.key.toUpperCase();
     checkLetter(store);
-    
-})
+    })
 
 //kind of a joke
 
